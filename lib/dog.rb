@@ -11,7 +11,7 @@ attr_reader :id
   
   def self.create_table
     sql =  <<-SQL
-      DROP TABLE IF EXISTS dogs (
+      CREATE TABLE IF NOT EXISTS dogs (
         id INTEGER PRIMARY KEY,
         name TEXT,
         breed TEXT

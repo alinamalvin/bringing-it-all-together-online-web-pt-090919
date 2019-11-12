@@ -10,14 +10,16 @@ attr_reader :id
   end
   
   def self.create_table
-    sql =  <<-SQL
+    sql = <<-SQL
       CREATE TABLE IF NOT EXISTS dogs (
         id INTEGER PRIMARY KEY,
         name TEXT,
         breed TEXT
         )
-        SQL
-    DB[:conn]
+    SQL
+
+    DB[:conn].execute(sql)
+  endonn]
   end
   
   def self.drop_table

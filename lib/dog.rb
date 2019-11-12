@@ -19,7 +19,7 @@ attr_reader :id
         breed TEXT
         )
         SQL
-    DB[:conn].execute(sql)
+    DB[:conn]
   end
   
   def self.drop_table
